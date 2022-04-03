@@ -4,6 +4,8 @@
 */
 :root {
   --anispeed: 10s;
+  --foreground: white;
+  --background: black;
 }
 
 body {
@@ -62,6 +64,7 @@ body {
     transform: translateX(-50%) rotate(-360deg);
   }
 }
+
 .holder .circle:nth-child(2) {
   border: 13px solid black;
   border-bottom: none;
@@ -467,4 +470,22 @@ body {
     transform: translateX(-50%) rotate(-5760deg);
   }
 }
+
+@media (prefers-color-scheme: dark) {
+  .circle {
+    background-color: white;
+  }
+
+  .wrapper {
+    background-color: black;
+  }
+}
+
+@media (prefers-reduced-motion) {
+:root{
+  --anispeed:50s;
+}  
+  }
+}
+
 /* # Mesmerizing by xposedbones */
